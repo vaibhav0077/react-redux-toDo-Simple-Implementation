@@ -1,10 +1,15 @@
 export const addTodo = (data) => {
-    return {
-        type: "ADD_TODO",
-        payLoad: {
-            id: new Date().getTime(), toString,
-            data: data
+    if (data.length > 2) {
+        return {
+            type: "ADD_TODO",
+            payLoad: {
+                id: new Date().getTime(), toString,
+                data: data
+            }
         }
+    }
+    else {
+        alert("Must Required larger String")
     }
 }
 
